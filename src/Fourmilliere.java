@@ -61,7 +61,11 @@ public class Fourmilliere {
         System.out.println("\n");
         oeufs += new Random().nextInt(0, 6);
         for (Fourmi fourmi : fourmiActuels) {
-            fourmi.action(this);
+            try {
+                fourmi.action(this);
+            } catch (ExceptionNourriture e) {
+                continue;
+            }
             if (fourmi.getAge() > 3) {
                 System.out.println("une fourmi " + fourmi.getClasse() + " viens de mourir.");
                 fourmisPresentes.remove(fourmi);
