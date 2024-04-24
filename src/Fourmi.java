@@ -31,7 +31,7 @@ public abstract class Fourmi {
     protected abstract double deplacement(String environnement);
 
     public String toString() {
-        System.out.print(age + " " + force);
+        System.out.print(age + "age " + force + " force");
         return null;
     }
     public abstract void action(Fourmilliere fourmilliere) throws InterruptedException, ExceptionNourriture;
